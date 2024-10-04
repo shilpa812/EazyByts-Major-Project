@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Link your CSS file here -->
+    <title>Fitness & Wellness Platform</title>
+    <style>
+    /* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:orange ;
+}
+
+header {
+    background-color: #343a40;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+header nav ul li a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.welcome-section {
+    margin-bottom: 2rem;
+}
+
+.modules-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.module-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+.module-card h2 {
+    color: #343a40;
+}
+
+.module-card p {
+    color: #6c757d;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/users">Users</a></li>
+                <li><a href="/workouts">Workouts</a></li>
+                <li><a href="/diet-plans">diet-plans</a></li>
+                <li><a href="/bookings">Bookings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1>Welcome to the Fitness & Wellness Platform</h1>
+            <p>Your journey to a healthier lifestyle begins here. Explore workouts, diet plans, and manage your bookings.</p>
+        </section>
+
+        <section class="modules-section">
+            <div class="module-card">
+                <h2>Users</h2>
+                <p>Manage user information and roles.</p>
+                <a href="/users" class="button">View Users</a>
+            </div>
+
+            <div class="module-card">
+                <h2>Workouts</h2>
+                <p>Explore different workout plans tailored to your needs.</p>
+                <a href="/workouts" class="button">View Workouts</a>
+            </div>
+
+            <div class="module-card">
+                <h2>Diet Plans</h2>
+                <p>Find diet plans to complement your fitness goals.</p>
+                <a href="/diet-plans" class="button">View Diet Plans</a>
+            </div>
+
+            <div class="module-card">
+                <h2>Bookings</h2>
+                <p>Manage your workout and diet plan bookings.</p>
+                <a href="/bookings" class="button">View Bookings</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fitness & Wellness Platform. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

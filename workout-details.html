@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Workout Details</title>
+    <style>
+    /* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.workout-details-container {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 90%;
+}
+
+.workout-details-container h1 {
+    color: #4CAF50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.workout-details-container p {
+    color: #333;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.duration {
+    font-weight: bold;
+    margin: 15px 0;
+    color: #4CAF50;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .workout-details-container {
+        padding: 15px;
+    }
+
+    .workout-details-container h1 {
+        font-size: 1.5em;
+    }
+
+    .back-button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+    </style>
+</head>
+<body>
+    <h1 th:text="${workout.name}">Workout Name</h1>
+    <p th:text="${workout.description}">Description</p>
+    <p th:text="'Duration: ' + ${workout.duration} + ' minutes'">Duration</p>
+</body>
+</html>

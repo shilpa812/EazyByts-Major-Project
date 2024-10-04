@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Workouts</title>
+       <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Available Workouts</h1>
+    <ul>
+        <li th:each="workout : ${workouts}">
+            <a th:href="@{/workouts/{id}(id=${workout.id})}" th:text="${workout.name}"></a>
+        </li>
+    </ul>
+</body>
+</html>
